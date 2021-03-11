@@ -1,4 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
+
+import Background from '../assets/bg.png';
 
 const GlobalStyles = createGlobalStyle`
   *{
@@ -14,6 +16,13 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: Roboto, Oxygen,Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #f3f3f3;
+    background: url(${Background});
+  }
+  #root {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
 
   button {
