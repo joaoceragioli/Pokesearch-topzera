@@ -6,7 +6,7 @@ import api from './services/api';
 import Spinner from './components/Spinner';
 
 const App = () => {
-  const [pokemon, setPokemon] = useState();
+  const [pokemon, setPokemon] = useState(null);
   const [error, setError] = useState(null);
   const [typedPokemon, setTypedPokemon] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -36,11 +36,13 @@ const App = () => {
   return (
     <S.Wrapper>
       <S.Welcome>Seja bem-vindo à pokedex!</S.Welcome>
-      <S.Instructions>Digite o nome de um pokemon para começar!</S.Instructions>
+      <S.Instructions>
+        Digite o nome ou id de um pokemon para começar!
+      </S.Instructions>
       <S.Form onSubmit={handleSubmit}>
         <S.Input
           value={typedPokemon}
-          placeholder="Nome do pokemon"
+          placeholder="Nome do pokemon/id"
           onChange={handleChange}
           hasError={!!error}
         />
@@ -81,7 +83,7 @@ const App = () => {
                 <span>
                   <strong>id</strong>: {pokemon.id}
                 </span>
-              </S.PokemonDetails>{' '}
+              </S.PokemonDetails>
             </>
           )}
         </S.PokemonCard>
