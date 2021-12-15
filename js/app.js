@@ -8,12 +8,13 @@ $(function(){
         while (s.length < (size || 2)) {s = "0" + s;}
         return s;
       }
-
+document.get
      $.each(mydata,function(index,item){
         itemRow+="<div class=\"pokemon\" data-name="+item.name+" data-type="+item.type+" tabindex=\""+i+"\">";
-        if (item.name=="Mr. Mime") itemRow+="<figure class=\"pokemon-figure\">"+"<img src=\"img/mr-mime.png\" alt=\""+item.name+"\"></figure>";
-        else if (item.name=="Farfetch'd")  itemRow+="<figure class=\"pokemon-figure\">"+"<img src=\"img/farfetchd.png\" alt=\""+item.name+"\"></figure>";
-        else  itemRow+="<figure class=\"pokemon-figure\">"+"<img src=\"img/"+item.name+".png\" alt=\""+item.name+"\"></figure>";
+        var itemImg=item.name.toLowerCase();
+        if (itemImg=="mr. mime") itemRow+="<figure class=\"pokemon-figure\">"+"<img src=\"img/mr-mime.png\" alt=\""+itemImg+"\"></figure>";
+        else if (itemImg=="farfetch'd")  itemRow+="<figure class=\"pokemon-figure\">"+"<img src=\"img/farfetchd.png\" alt=\""+itemImg+"\"></figure>";
+        else  itemRow+="<figure class=\"pokemon-figure\">"+"<img src=\"img/"+itemImg+".png\" alt=\""+itemImg+"\"></figure>";
         itemRow+="<section class=\"pokemon-description\">"
         itemRow+="<span class=\"pokemon-id\">#"+(item.id).pad(3)+"</span>";
         itemRow+="<h1 class=\"pokemon-name\">"+item.name+"</h1>";

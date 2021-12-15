@@ -15,7 +15,6 @@ function filterFunction() {
         li[i].style.display = "none";
         }
       }
-      console.log(a)
       txtValue = a;
       if (txtValue.indexOf(input) > -1) {
         li[i].style.display = "";
