@@ -8,7 +8,6 @@ $(function(){
         while (s.length < (size || 2)) {s = "0" + s;}
         return s;
       }
-document.get
      $.each(mydata,function(index,item){
         itemRow+="<div class=\"pokemon\" data-name="+item.name+" data-type="+item.type+" tabindex=\""+i+"\">";
         var itemImg=item.name.toLowerCase();
