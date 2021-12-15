@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="img/pokeball.ico"/>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
   <script src="js/data.js"></script>
   <meta charset="UTF-8">
@@ -15,11 +16,11 @@
   </header>
   <main>
     <form class="pokedex-control">
-      <div class="form-control">
+      <div class="form-control name">
         <label for="filter-name">Name:</label>
         <input type="text" id="filter-name" onkeyup="myFunction()">
       </div>
-      <div class="form-control">
+      <div class="form-control type">
         <label for="filter-type">Type:</label>
         <select id="filter-type" onchange="filterFunction()">
           <option value="">All</option>
@@ -42,7 +43,7 @@
    
         </select>
       </div>
-      <div class="form-control">
+      <div class="form-control sort">
         <label for="sort">Sort:</label>
         <select id="sort-type" onchange="sortFunction()">
           <option>Lowest Number (First)</option>
@@ -50,6 +51,14 @@
           <option>A-Z</option>
           <option>Z-A</option>
         </select>
+      </div>
+      <div class="form-control-sexo cadastro">
+        <label for="filter-cadastro">Cadastrar Pokemon:</label>
+        <input type="text" id="filter-name" onkeyup="myFunction()">
+      </div>
+      <div class="form-control-sexo butao">
+        <input style="height:auto; width:50px;" type="image" src="img/pokedex_button.png" />
+        <input style="height:auto; width:50px;" type="image" src="img/reset_button.png" />
       </div>
     </form>
     <section class="pokedex" id="divItems">

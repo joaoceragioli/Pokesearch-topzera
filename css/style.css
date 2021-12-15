@@ -138,6 +138,9 @@ main {
 @media (min-width: 840px) {
   .pokedex-control {
     grid-template-columns: repeat(3, 17rem);
+    grid-template-areas:
+    'name type sort'
+    ' cadastro cadastro butao';
   }
 }
 
@@ -146,6 +149,23 @@ main {
   font-size: 1.1rem;
   display: grid;
   grid-template-columns: 3rem minmax(13rem, 15rem);
+  grid-gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cadastro { grid-area: cadastro; grid-template-columns: 11rem minmax(12rem, 20rem)!important; }
+.butao { grid-area: butao; }
+.reset { grid-area: reset; }
+.name { grid-area: name; }
+.type { grid-area: type; }
+.sort { grid-area: sort; }
+
+.form-control-sexo {
+  margin: 5% .5rem;
+  font-size: 1.1rem;
+  display: grid;
+  grid-template-columns: 4rem minmax(13rem, 15rem);
   grid-gap: .5rem;
   align-items: center;
   justify-content: center;
