@@ -8,6 +8,8 @@ function saveFunction() {
     pokemon = data.filter(obj => {
         return obj.name === input
       })[0];
-    pokemons.push(pokemon);
+    if (pokemon != null){
+      pokemons.push(pokemon);
+    }
     localStorage.setItem('pokemons', JSON.stringify(pokemons));
 }
