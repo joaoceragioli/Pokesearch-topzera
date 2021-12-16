@@ -3,6 +3,7 @@
 <head>
   <link rel="icon" type="image/png" href="img/pokeball.ico"/>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
   <script src="js/data.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,10 +55,10 @@
       </div>
       <div class="form-control-sexo cadastro">
         <label for="filter-cadastro">Cadastrar Pokemon:</label>
-        <input type="text" id="filter-name" onkeyup="myFunction()">
+        <input type="text" id="filter-cadastro">
       </div>
       <div class="form-control-sexo butao">
-        <input style="height:auto; width:50px;" type="image" src="img/pokedex_button.png" />
+        <input style="height:auto; width:50px;" type="image" src="img/pokedex_button.png" onclick="saveFunction()" />
         <input style="height:auto; width:50px;" type="image" src="img/reset_button.png" />
       </div>
     </form>
@@ -68,5 +69,6 @@
   <script src="js/search.js"></script>
   <script src="js/filter.js"></script>
   <script src="js/sort.js"></script>
+  <script src="js/save.js"></script>
 </body>
 </html>

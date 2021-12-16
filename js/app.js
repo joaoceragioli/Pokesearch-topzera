@@ -1,6 +1,6 @@
 $(function(){
     
-    var mydata=data
+    var mydata=JSON.parse(localStorage.getItem("nameForData"));
     var itemRow="";
     var i=1;
     Number.prototype.pad = function(size) {

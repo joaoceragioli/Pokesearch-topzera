@@ -2,6 +2,7 @@ function sortFunction() {
     // Declare variables
 
     input = document.getElementById("sort-type").value;
+    data = JSON.parse(localStorage.getItem("nameForData"));
     var itemRow="";
     var i=1;
     Number.prototype.pad = function(size) {
@@ -57,7 +58,5 @@ function sortFunction() {
      });  
      
      $("#divItems").html(itemRow);
-
-
 
 }
