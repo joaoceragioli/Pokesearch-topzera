@@ -1,6 +1,7 @@
 function myFunction() {
   // Declare variables
-  data = JSON.parse(localStorage.getItem("nameForData"));
+  data = []
+  data.push(JSON.parse(localStorage.getItem("nameForData")));
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('filter-name');
   filter = input.value.toUpperCase();
