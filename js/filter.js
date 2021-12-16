@@ -1,7 +1,6 @@
 function filterFunction() {
     // Declare variables
-    data = []
-    data.push(JSON.parse(localStorage.getItem("nameForData")));
+    data = JSON.parse(localStorage.getItem("pokemons"));
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("filter-type").value;
     li = document.getElementsByClassName('pokemon');

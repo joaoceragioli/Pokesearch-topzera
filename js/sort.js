@@ -2,8 +2,7 @@ function sortFunction() {
     // Declare variables
 
     input = document.getElementById("sort-type").value;
-    data = []
-    data.push(JSON.parse(localStorage.getItem("nameForData")));
+    data = JSON.parse(localStorage.getItem("pokemons"));
     var itemRow="";
     var i=1;
     Number.prototype.pad = function(size) {
