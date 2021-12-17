@@ -200,6 +200,17 @@ main {
   border-bottom: 1px solid #000;
 }
 
+.pokedex-control #filter-cadastro {
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  outline: none;
+  transition: all .2s;
+}
+
+.pokedex-control #filter-cadastro:focus {
+  border-bottom: 1px solid #000;
+}
+
 @keyframes pokemon-up {
 
   0%,
@@ -305,4 +316,26 @@ main {
   background-color: #212121;
   color: #fff;
   padding: 0 .2rem;
+}
+
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #9c41f2;
+  border-radius: 100%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+}
+#loading.display {
+  visibility: visible;
+}
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }

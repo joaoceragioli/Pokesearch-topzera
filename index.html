@@ -58,10 +58,11 @@
         <input type="text" id="filter-cadastro">
       </div>
       <div class="form-control-sexo butao">
-        <input style="height:auto; width:50px;" type="image" src="img/pokedex_button.png" onclick="saveFunction()" />
+        <input class="cadastrar" style="height:auto; width:50px;" type="image" src="img/pokedex_button.png"/ onclick="return false">
         <input style="height:auto; width:50px;" type="image" src="img/reset_button.png" onclick="resetFunction()"/>
       </div>
     </form>
+    <div id="loading"></div>
     <section class="pokedex" id="divItems">
    </section>
   </main>

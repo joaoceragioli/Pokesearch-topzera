@@ -1,4 +1,4 @@
-$(function(){
+function renderPage(){
     if (localStorage.hasOwnProperty("pokemons")) {
         var mydata=JSON.parse(localStorage.getItem("pokemons"));
         var itemRow="";
@@ -9,7 +9,7 @@ $(function(){
             return s;
         }
         $.each(mydata,function(index,item){
-            console.log(mydata)
+            //console.log(mydata)
             itemRow+="<div class=\"pokemon\" data-name="+item.name+" data-type="+item.type+" tabindex=\""+i+"\">";
             var itemImg=item.name.toLowerCase();
             if (itemImg=="mr. mime") itemRow+="<figure class=\"pokemon-figure\">"+"<img src=\"img/mr-mime.png\" alt=\""+itemImg+"\"></figure>";
@@ -50,4 +50,5 @@ $(function(){
     }else {
         console.log("Sem Pokemons");
     }
- });
+ }
+$(renderPage());
